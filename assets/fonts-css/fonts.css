@@ -1,0 +1,8 @@
+@font-face{
+    font-family: "sf-ui-regular";
+    src: url("/fonts/SF-Compact-Text-Regular.otf");
+}
+
+.font-sf-regular{
+    font-family: "sf-ui-regular";
+}
