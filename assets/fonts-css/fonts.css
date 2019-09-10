@@ -3,6 +3,36 @@
     src: url("/fonts/SF-Compact-Text-Regular.otf");
 }
 
+.font-rajdhani{
+font-family: 'Rajdhani', sans-serif;
+}
+.font-raleway{
+    font-family: 'Raleway', sans-serif;
+}
+.font-notosans{
+    font-family: 'Noto Sans', sans-serif;
+}
+.font-worksans{
+    font-family: 'Work Sans', sans-serif;
+}
+.font-quicksand{
+    font-family: 'Quicksand', sans-serif;
+}
+.font-abel{
+    font-family: 'Abel', sans-serif;
+}
 .font-sf-regular{
-    font-family: "sf-ui-regular";
+    font-family: 'sf-ui-regular', sans-serif;
+}
+.font-comfortaa{
+    font-family: 'Comfortaa', cursive;
+}
+.font-cairo{
+    font-family: 'Cairo', sans-serif;
+}
+.font-maven{
+    font-family: 'Maven Pro', sans-serif;
+}
+.font-assistant{
+    font-family: 'Assistant', sans-serif;
 }

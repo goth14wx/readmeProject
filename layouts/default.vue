@@ -1,5 +1,6 @@
 <template>
-  <v-app >
+  <v-app light>
+    <!--DRAWER-->
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -11,9 +12,9 @@
     >
     
     </v-navigation-drawer>
+  <!--APP BAR UP-->
     <v-app-bar
       :clipped-left="clipped"
-      fixed
       app
       flat
       class="color-green-second"
@@ -22,50 +23,48 @@
       <v-btn
         icon
         @click.stop="miniVariant = !miniVariant"
+        class="d-none d-md-flex"
       >
         <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
       </v-btn>
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title class="font-abel" v-text="title" />
+       
       <v-spacer />
+     <profile/>
     </v-app-bar>
-    <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
+<!--CONTENT PAGE-->
+    <v-content style="background-color:white">
+      <nuxt/>
     </v-content>
 
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-      <span>&copy; 2019</span>
-    </v-footer>
+
+
   </v-app>
 </template>
 
 <script>
+import profile from "@/components/appbar/profile";
 export default {
   data () {
     return {
       clipped: false,
       drawer: true,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
       miniVariant: true,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'ReadMe.txt'
     }
+  },
+  components:{
+    profile
   }
 }
 </script>
+
+<style>
+
+.h-default{
+  height :50px;
+}
+
+</style>

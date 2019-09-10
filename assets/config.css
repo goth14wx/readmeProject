@@ -5,3 +5,27 @@
 .color-purple{
     background-color:#3F0E40 !important;
 }
+
+.color-green-gradient-static{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2dce89+0,2dce89+70,2dce89+70,2dce89+76,2dce89+76,2dce89+76,ffffff+76,ffffff+98,ffffff+100,ffffff+100,ffffff+100,ffffff+100 */
+background: #2dce89; /* Old browsers */
+background: -moz-linear-gradient(top,  #2dce89 0%, #2dce89 70%, #2dce89 70%, #2dce89 76%, #2dce89 76%, #2dce89 76%, #ffffff 76%, #ffffff 98%, #ffffff 100%, #ffffff 100%, #ffffff 100%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #2dce89 0%,#2dce89 70%,#2dce89 70%,#2dce89 76%,#2dce89 76%,#2dce89 76%,#ffffff 76%,#ffffff 98%,#ffffff 100%,#ffffff 100%,#ffffff 100%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #2dce89 0%,#2dce89 70%,#2dce89 70%,#2dce89 76%,#2dce89 76%,#2dce89 76%,#ffffff 76%,#ffffff 98%,#ffffff 100%,#ffffff 100%,#ffffff 100%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2dce89', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+
+.color-green-gradient-medium{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2dce89+0,2dce89+29,ffffff+29,ffffff+29,fefefe+100 */
+background: #2dce89; /* Old browsers */
+background: -moz-linear-gradient(top,  #2dce89 0%, #2dce89 29%, #ffffff 29%, #ffffff 29%, #fefefe 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #2dce89 0%,#2dce89 29%,#ffffff 29%,#ffffff 29%,#fefefe 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #2dce89 0%,#2dce89 29%,#ffffff 29%,#ffffff 29%,#fefefe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2dce89', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
+
+}
+
+.test-border{
+    border: 1px solid red !important;
+}
