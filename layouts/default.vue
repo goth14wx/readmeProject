@@ -1,5 +1,5 @@
 <template>
-  <v-app light>
+  <v-app  class="default-background">
     <!--DRAWER-->
     <v-navigation-drawer
       v-model="drawer"
@@ -18,6 +18,7 @@
       app
       flat
       class="color-green-second"
+      height="70px"
     >
       <v-app-bar-nav-icon class="d-lg-none d-xl-flex" @click.stop="drawer = !drawer" />
       <v-btn
@@ -27,13 +28,15 @@
       >
         <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
       </v-btn>
-      <v-toolbar-title class="font-abel" v-text="title" />
+      <v-toolbar-title class="font-sf-regular" v-text="title" />
        
       <v-spacer />
+    <toolbar/>
      <profile/>
     </v-app-bar>
 <!--CONTENT PAGE-->
     <v-content style="background-color:white">
+      <h1 class="color-green-second">WHERE I AM</h1>
       <nuxt/>
     </v-content>
 
@@ -44,6 +47,7 @@
 
 <script>
 import profile from "@/components/appbar/profile";
+import toolbar from "@/components/appbar/toolbar";
 export default {
   data () {
     return {
@@ -52,11 +56,12 @@ export default {
       miniVariant: true,
       right: true,
       rightDrawer: false,
-      title: 'ReadMe.txt'
+      title: 'readMe'
     }
   },
   components:{
-    profile
+    profile,
+    toolbar
   }
 }
 </script>

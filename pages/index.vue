@@ -9,19 +9,56 @@
     </v-row>
     <v-row class="color-green-second pt-0">
       <v-col
-        v-for="n in 3"
+        v-for="(card,n) in cards"
         :key="n"
         cols="12"
-        md="4"
-        sm="4"
+        md="3"
+        sm="6"
       >
+       <v-hover v-slot:default="{ hover }">
         <v-card
-          class="pa-3 ma-1"
-          tile
+        :elevation="hover ? 12 : 2"
+          class="ma-3"
           color="white black--text"
+          style="border-radius:10px"
         >
-          .col-6 .col-md-4
+        <v-container >
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <v-row>
+      <v-col
+        cols="6"
+        md="8"
+        class="font-sf-light"
+        style="text-align:center"
+      >
+     <h3 class="text-truncate" > {{card.title}}</h3>
+     <h6 class="text-truncate text-muted">{{card.subtitle}}</h6>
+      </v-col>
+      <v-col 
+       cols="6"
+        md="4"
+        style="text-align:center"
+        >
+         <v-icon large center :color="card.color">{{card.icon}}</v-icon>
+      </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <h3>HOLA</h3>
+        </v-col>
+      </v-row>
+        <v-btn
+              absolute
+              fab
+              bottom
+              right
+              :color="card.color"
+            >
+              <v-icon>mdi-play</v-icon>
+            </v-btn>
+      </v-container>
         </v-card>
+       </v-hover>
       </v-col>
     </v-row>
 
@@ -30,15 +67,17 @@
       <v-col
         v-for="n in 2"
         :key="n"
-        cols="6"
-        
+        cols="12"
+        md="6"
       >
         <v-card
           class="pa-2"
+          light
           outlined
           tile
+          style="border-radius:10px"
         >
-          .col-6
+          <cardTest  />
         </v-card>
       </v-col>
     </v-row>
@@ -48,11 +87,42 @@
 <script>
 import cardTest from "@/components/card-test";
 export default {
-  data:(()=>{
-
-  }),
+  data(){
+    return{
+      cards:[
+         {
+            title:"Ahora, ¿Que sigue?",
+            icon:"calendar_today",
+            subtitle:"Que hay en tu agenda",
+            color:"purple"
+          },
+          {
+            title:"¿Donde Lo deje?",
+            icon:"menu_book",
+            subtitle:"Donde dejaste la lectura pasada",
+            color:"green"
+          },
+          {
+            title:"Ultimo quiz que tomaste",
+            icon:"list_alt",
+            subtitle:"Ultimo test que tomaste",
+            color:"pink"
+          },
+          {
+            title:"¿Segur@ lo terminaste?",
+            icon:"create",
+            subtitle:"Ultimos apuntes que tomaste",
+            color:"yellow"
+          }
+      ]
+    }
+  },
   components:{
       cardTest
   }
 }
 </script>
+
+<style> 
+
+</style>

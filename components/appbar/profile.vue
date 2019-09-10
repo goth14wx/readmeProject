@@ -15,7 +15,7 @@
         >
          <v-img src="https://randomuser.me/api/portraits/men/78.jpg" max-width="35px" style="border-radius:50%"></v-img>
   &nbsp
-          <span class="d-none d-md-flex">Dave Ones</span>
+          <h6 class="font-sf-light d-none d-md-flex font-type-one">John Snow</h6>
         </v-btn>
       </template>
 
@@ -88,3 +88,12 @@ export default{
   }
 }
 </script>
+<style>
+.font-type-one{
+  
+    font-size: .875rem!important;
+    color: hsla(0,0%,100%,.95);
+    text-transform:none !important;
+  font-weight: 600!important;
+}
+</style>
