@@ -4,9 +4,11 @@
             color="transparent"
             outlined
             tile>
-             <v-card-title  class="font-sf-light">I'm a title</v-card-title>
+             <v-card-title  class="font-sf-regular"><slot name="title"></slot></v-card-title>
              <v-divider class="mx-4" />
-    <v-card-text>I'm card text</v-card-text>
+    <v-card-text>
+      <list/>
+    </v-card-text>
     <v-card-actions>
       <v-btn text>Click</v-btn>
     </v-card-actions>
@@ -14,10 +16,14 @@
 </template>
 
 <script>
+import list from "@/components/dashboard/list";
 export default{
   data(){
     return{
     }
+  },
+  components:{
+    list
   }
 }
 </script>

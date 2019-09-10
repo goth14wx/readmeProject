@@ -65,7 +65,7 @@
     <!-- Columns are always 50% wide, on mobile and desktop -->
     <v-row class="color-green-gradient-medium pt-0">
       <v-col
-        v-for="n in 2"
+        v-for="(td,n) in todo"
         :key="n"
         cols="12"
         md="6"
@@ -77,7 +77,11 @@
           tile
           style="border-radius:10px"
         >
-          <cardTest  />
+          <cardTest>
+            <template v-slot:title>
+              {{td.title}}
+            </template>
+          </cardTest>
         </v-card>
       </v-col>
     </v-row>
@@ -86,6 +90,7 @@
 
 <script>
 import cardTest from "@/components/card-test";
+
 export default {
   data(){
     return{
@@ -114,6 +119,14 @@ export default {
             subtitle:"Ultimos apuntes que tomaste",
             color:"yellow"
           }
+      ],
+      todo:[
+        {
+          title:"To-do List"
+        },
+        {
+          title:"Ultimas Clases Agregadas"
+        }
       ]
     }
   },

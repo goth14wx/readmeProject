@@ -5,8 +5,11 @@
       <div class="flex-grow-1"></div>
 
       <template>
+         <v-btn icon>
+          <v-icon small>dashboard</v-icon>
+        </v-btn>
         <v-btn icon>
-          <v-icon>notifications</v-icon>
+          <v-icon small>notifications</v-icon>
         </v-btn>
       </template>
     </v-toolbar>
