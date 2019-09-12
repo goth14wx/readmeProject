@@ -2,15 +2,16 @@
   <v-app  class="default-background">
     <!--DRAWER-->
     <v-navigation-drawer
+    expand-on-hover
       v-model="drawer"
       :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
       app
       flat
-      class="color-purple"
+      class="color-instagram-gradient"
     >
-    
+      <list/>
     </v-navigation-drawer>
   <!--APP BAR UP-->
     <v-app-bar
@@ -36,7 +37,7 @@
     </v-app-bar>
 <!--CONTENT PAGE-->
     <v-content style="background-color:white">
-      <h1 class="color-green-second">WHERE I AM</h1>
+     <breadcrums class="color-green-second" />
       <nuxt/>
     </v-content>
 
@@ -48,6 +49,8 @@
 <script>
 import profile from "@/components/appbar/profile";
 import toolbar from "@/components/appbar/toolbar";
+import list from "@/components/drawer/list";
+import breadcrums from "@/components/dashboard/breadcrums";
 export default {
   data () {
     return {
@@ -61,7 +64,9 @@ export default {
   },
   components:{
     profile,
-    toolbar
+    toolbar,
+    list,
+    breadcrums
   }
 }
 </script>

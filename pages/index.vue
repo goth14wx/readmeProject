@@ -85,6 +85,14 @@
         </v-card>
       </v-col>
     </v-row>
+
+    <v-row>
+      <v-col
+      cols="12"
+      >
+      <v-card></v-card>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -105,7 +113,7 @@ export default {
             title:"¿Donde Lo deje?",
             icon:"menu_book",
             subtitle:"Donde dejaste la lectura pasada",
-            color:"green"
+            color:"green white--text"
           },
           {
             title:"Ultimo quiz que tomaste",
@@ -122,7 +130,7 @@ export default {
       ],
       todo:[
         {
-          title:"To-do List"
+          title:"Ahora ¿Que hay en la lista?"
         },
         {
           title:"Ultimas Clases Agregadas"

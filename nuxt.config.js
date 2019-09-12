@@ -5,6 +5,10 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  /*
+    SERVER listen
+  */
+ serverMiddleware: ['~/api/build/index.js'],
   head: {
     titleTemplate: '%s - ' + process.env.npm_package_name,
     title: process.env.npm_package_name || '',
@@ -41,6 +45,7 @@ module.exports = {
   buildModules: [
     '@nuxtjs/vuetify',
   ],
+  
   /*
   ** Nuxt.js modules
   */
